@@ -1,12 +1,6 @@
-﻿using FileProcessing;
-using System.IO;
-using System.Text;
-using Telegram.Bot;
-using Telegram.Bot.Exceptions;
+﻿using Telegram.Bot;
 using Telegram.Bot.Polling;
-using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
-using Telegram.Bot.Types.ReplyMarkups;
 namespace telega
 {
     internal class Program
@@ -38,8 +32,8 @@ namespace telega
                 if (Console.ReadLine() == "000") break;
             }
             // Send cancellation request to stop bot
-            cts.Cancel(); 
+            cts.Cancel();
         }
-        
+
     }
 }

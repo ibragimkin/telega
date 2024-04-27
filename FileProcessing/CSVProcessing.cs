@@ -1,24 +1,11 @@
-﻿using CsvHelper.Configuration;
-using CsvHelper;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
-using System.Collections.Generic;
-using CsvHelper;
+﻿using CsvHelper;
 using CsvHelper.Configuration;
 using System.Globalization;
-using System.IO;
-using System.Threading.Tasks;
-using System.Reflection.PortableExecutable;
 
 
 namespace FileProcessing
 {
-    
+
     public class CSVProcessing
     {
         /// <summary>
@@ -41,11 +28,12 @@ namespace FileProcessing
 
                     csv.Context.RegisterClassMap<IceHillCsvMapper>();
 
-                    try {
+                    try
+                    {
                         var result = await csv.GetRecordsAsync<IceHill>().ToListAsync();
                         return result;
                     }
-                    catch {}
+                    catch { }
                 }
             }
             return null;
